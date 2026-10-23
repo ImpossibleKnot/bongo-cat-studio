@@ -1,0 +1,3 @@
+PASS: all four cat selectors, engine/preset knobs, five editor pages, live engine labels, save and reload without browser errors.
+PASS: browser boots, page navigation, dynamic knob labels, hardware-style click control, costumes, live demo, WAV download and quiet reload. No JS errors.
+PASS: Live controls, tap tempo, editor from Live, sound A/B, recording-safe demo and phone layout. No browser errors.

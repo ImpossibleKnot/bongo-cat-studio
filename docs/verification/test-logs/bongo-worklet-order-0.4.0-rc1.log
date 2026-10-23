@@ -1,0 +1,1 @@
+PASS: fast page navigation cannot reinterpret an earlier button or knob gesture; adjacent turns coalesce in order.

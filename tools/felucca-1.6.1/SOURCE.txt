@@ -1,0 +1,3 @@
+Source: https://github.com/hugelton/Felucca/blob/v1.6.1/tools/fm1_install.py
+Git blob SHA: 39fa60815a036a6bfec3109ccc6ec341f98a6cd6
+Fetched and reviewed before use. Upstream installer, unmodified.

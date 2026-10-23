@@ -1,0 +1,28 @@
+size: 895 main-loop functions built for size (6 not in this build; 118 reached from an interrupt kept -Os)
+loader: image 8216 B at 0x1c0a800, bss end 0x1c0f510
+loader: ota.bin 6934 B
+face S: InterTight[wght].ttf@400 12px h15 base12  105 glyphs x 4  data 10410 B + table 3360 B + kern 2757 B (919 pairs) = 16537 B   digit adv 7.00px
+face M: InterTight[wght].ttf@500 15px h19 base15  105 glyphs x 4  data 13083 B + table 3360 B + kern 2976 B (992 pairs) = 19429 B   digit adv 9.00px
+face L: InterTight[wght].ttf@600 28px h35 base28  41 glyphs x 2  data 5761 B + table 656 B + kern 369 B (123 pairs) = 6826 B   digit adv 18.00px
+fonts total 42792 B  -> <workspace>/bongo-cat-studio/build/gen/ui_fonts.h
+2 extra bytes in post.stringData array
+2 extra bytes in post.stringData array
+icons: x_oct_up: symbol_pitch_up not in the font yet, using control_arrow_up
+icons: x_oct_dn: symbol_pitch_down not in the font yet, using control_arrow_down
+icons 12px: 105 cells, 4237 B
+icons 16px: 39 cells, 2590 B
+icons 24px: 6 cells, 667 B
+icons code: 57 B
+icons total 7551 B -> <workspace>/bongo-cat-studio/build/gen/ui_icons.h   (87 legacy names + 36 new)
+keycaps: 29 pills, data 4948 B + table 232 B; knob arcs 584 B = 5764 B -> <workspace>/bongo-cat-studio/build/gen/ui_keycaps.h
+fm6 patches: 8 -> <workspace>/bongo-cat-studio/build/gen/felucca_fm6.h
+generated waves into <workspace>/bongo-cat-studio/build/genwav
+samples: 5 sets, 11 zones, 126244 B ADPCM, SLICE BREAK 44100 samples, SLICE PIANO (shared) 16537 samples (cached)
+  ok    .ram_text: 916 insns, no calls
+  ok    .c1_text: 50 insns, only its job called
+  ok    image 531604 B; RAM .data+.bss 63336 B of 73728; pool 328896 B of 368640
+  ok    register access: hal/ only (src/, engines/src/, loader/ clean)
+app      <workspace>/bongo-cat-studio/build/felucca.bin  531604 B
+loader   <workspace>/bongo-cat-studio/build/loader/ota.bin  6934 B
+package  <workspace>/bongo-cat-studio/build/felucca.fwsc  610090 B, identity FM-1_980
+Bongo Cat's Tiny Studio: <workspace>/bongo-cat-studio/build/bongo-cat-studio-0.4.0-rc1.fwsc

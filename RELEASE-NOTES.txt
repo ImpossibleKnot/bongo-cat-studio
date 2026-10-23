@@ -1,0 +1,66 @@
+BONGO CAT'S TINY STUDIO 0.4.0-rc1
+Release candidate / 23 October 2026
+
+A four-part instrument with a tiny band on its screen. Play a lead, record a
+phrase, shape every sound, and perform the arrangement with mute and solo.
+The cat reacts to your playing. The music stays under your control.
+
+NEW IN THIS CANDIDATE
+- Live page: individual Play / Mute / Solo, smooth fades and preserved levels.
+  Solo is temporary; clearing it brings back the original mute states.
+- Tap tempo on Live (ENV), averaging up to four quarter-note intervals.
+  External MIDI clock remains authoritative.
+- Pawdo sound A/B (LFO on the five editor pages): a separate previous edit
+  per cat, including custom FM6 voices. Notes and the mixer are preserved.
+- Jazz Police, Cat Cafe and Purrbit musical Easter eggs, in any transposition.
+  Original procedural artwork; visual only, with CALM support.
+- Save/error/undo messages now appear on the editor pages too.
+- Replace/overdub mode is locked during an armed or active take.
+- Browser inputs preserve their order through startup and fast page changes.
+  Responsive layouts keep the selected page captions when the window changes.
+- Browser demo keeps your sound/hat and refuses to start during recording.
+  Browser storage failures are visible, and an unsupported sample rate fails
+  clearly instead of playing at the wrong pitch.
+
+KEPT FROM 0.3
+13 engines on every part, factory presets, eight engine controls, ADSR and
+per-part effects. 1/2/4-bar recording, overdub and phrase undo. Key assistance,
+four progressions, diatonic backing and voice leading. Sustained warm bass
+with kick ducking. Maximum Cat, dress-up, quiet startup and stereo WAV export.
+
+UPGRADING
+The existing BC2 jam format and flash layout are unchanged. Back up the live
+jam with the current firmware before updating. The normal Felucca updater is
+used, without force. Identity is FM-1_980; USB still appears as Felucca.
+A/B, solo and Easter eggs are temporary; sound edits and mute settings save.
+Downgrading to 0.3 understands the same project format; keep the backup.
+
+VERIFICATION AND RELEASE STATUS
+This is a release candidate. VERIFICATION.json in the release bundle records
+what was actually tested, including package simulations, sanitizer tests,
+browser tests and physical FM-1 evidence when available. Tests do not replace
+a person exercising every physical control or a long hardware soak.
+Do not describe this candidate as tested on multiple FM-1 hardware revisions.
+
+KNOWN BOUNDARIES
+- Shared polyphony and CPU budget apply to the four engines; demanding patches
+  can reduce available voices. One short hardware jam is not every patch mix.
+- Keyboard recording is for Your Cat; backing is generated, not a four-track
+  arbitrary pattern editor. EDIT clears the lead; LFO outside Live/the sound
+  editor restores the previous take, clear or resize.
+- ALGORITHM on the original six pages deliberately loads a whole band style.
+  Use the sound editor to change one cat. Live disables those sound selectors.
+- Play/Mute/Solo keeps effect tails. Mutes save, solo does not.
+- The four explicit Felucca project slots have no panel workflow in this UI.
+- The browser preview has its own jam; it does not edit the attached FM-1.
+- USB recording excludes the metronome. DAC click behavior is tested separately.
+
+CREDITS
+Unofficial Felucca v1.6.1 derivative, based on
+  a53ecf428c29c780108fd70a31b71a32a6b5c313
+with Felucca-Engines
+  c46e0086f69bdc26df1cd144dca9e683cc4531dd
+by Leo Kuroshita / Hugelton Instruments and contributors.
+See LICENSE, LICENSING.md, LICENSES/, CREDITS.md and the sample attribution.
+Tiny Studio overlay code is GPL-3.0-only. This custom build is not an upstream
+Felucca release or an official M-VAVE product.

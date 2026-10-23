@@ -1,0 +1,28 @@
+PASS: all eight named presets produce finite, non-silent audio
+PASS: physical keys, jazz recognition, one-bar learning, playback, mute, clear and undo
+PASS: three backing styles, momentary fill release and help navigation
+PASS: 400 mixed gestures, save to NOR, audio peak 0.0875; frames 2595
+PASS: cold boot restores loop, instrument, tempo, band, key, hat, theme and knobs
+PASS: all 12 keys, major/minor, all four progressions remain diatonic
+PASS: sound/style changes preserve the four-part mixer
+PASS: complete 1/2/4-bar takes, visual lead-in and automatic loop playback
+PASS: overdub adds notes while the phrase plays; undo restores all 64 steps
+PASS: v0.1 jam migrates without losing its notes, mix or character
+PASS: actual click audio ON, LOOPER/K4 OFF, silence with transport and loop still enabled
+PASS: dedicated browser control leaves band audio running; K1 on the studio page still changes tempo
+PASS: cold boot silences inherited ON metronome and two-bar count-in
+PASS: sustained bass preserves all onset positions at every style/energy; band-off stays silent
+PASS: actual sequencer bass still sounds 200-420 ms after its onset, energy 79.796
+PASS: smooth bass-only kick duck, stereo symmetry, full recovery and no duck from muted kick
+PASS: Maximum Cat moves without lead notes (5515 changed pixels), CALM stays still, release restores page
+PASS: all four parts, all 13 engines, preset browsing and every sound/envelope/effects knob; other parts and sequences untouched
+PASS: panel keys audition the selected cat; REC returns safely to the lead
+PASS: mode-dependent knob names follow the actual sound
+PASS: SAVE commits all edited sounds without rewriting the recorded sequence
+PASS: all four edited sounds and every sequence byte survive cold boot
+PASS: all parts/13 engines A/B, grouped knob undo, own FM6 patch, mix and all sequences preserved
+PASS: solo overrides/restores prior mutes; smooth stereo isolation; levels kept; tap tempo respects external clock
+PASS: three original visual secrets in all keys; no saved music changes; CALM still; phrase timeout
+PASS: record replace/overdub mode cannot change halfway through a take
+PASS: 2000 mixed live gestures under ASan/UBSan with finite stereo output
+PASS: complete Tiny Studio host regression suite

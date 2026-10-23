@@ -1,0 +1,174 @@
+BONGO CAT'S TINY STUDIO 0.4.0-rc1
+Custom instrument for the M-VAVE FM-1. Built 23 October 2026.
+
+A LITTLE BAND, ALL YOURS
+Turn PRESETS for your sound and ALGORITHM for Lofi / Funk / Arcade.
+PLAY starts the band. SELECT or HOME cycles twelve pages. The four knobs control
+what that page shows. MASTER always controls the output volume.
+
+PAGE        KNOB 1          KNOB 2          KNOB 3          KNOB 4
+Studio      Tempo 40-220    Swing           Band energy     Room reverb
+Harmony     Key            Major/minor     Progression     Key assist
+Looper      1/2/4 bars      Replace/overdub Quantize/feel   Metronome
+Mixer       Your cat       Keys cat        Bass cat        Drum cat
+Dress up    Coat           Hat             Room colour     Calm/lively
+Help        Metronome      -               -               -
+Sounds      Part           Engine          Preset          Part level
+Tone        Sound control 1 / 2 / 3 / 4 (labels follow the engine)
+Colour      Sound control 5 / 6 / 7 / 8 (labels follow the engine)
+Envelope    Attack         Decay           Sustain         Release
+Effects     Drive          Chorus          Delay           Reverb
+Live        Your cat       Keys cat        Bass cat        Drum cat
+            Each knob: PLAY / MUTE / SOLO. ENV taps tempo; LFO cancels solo.
+
+EDIT EVERY CAT
+Go to SOUNDS with SELECT / HOME. K1 chooses Your Cat, Keys, Bass or Drums;
+K2 chooses among 13 engines, K3 browses its factory presets, K4 sets its level.
+Each part can use any engine. Turning a sound/preset control preserves that
+part's sequence, mixer level, pan and mute, and leaves all other parts alone.
+On SOUNDS, TONE, COLOUR, ENVELOPE and EFFECTS, PRESETS browses this cat's
+presets and ALGORITHM changes this cat's engine. On the original six pages
+they still choose your eight lead instruments and the band style.
+TONE and COLOUR expose all eight engine controls, including waveform, filter,
+kit/sample and FM6 patch controls where that engine provides them. Labels and
+units follow the chosen engine and mode. ENVELOPE changes ADSR; EFFECTS edits
+only this part's drive, chorus, delay and reverb. One-shot drum sounds also
+have their own shaping controls in TONE/COLOUR.
+The panel keyboard auditions the selected cat on these editor pages. External
+MIDI keeps its existing channel routing. REC returns to the lead for recording;
+you cannot switch audition parts during a take. Your sound edits remain
+independent of the sequence and survive SAVE, autosave and power-on.
+LFO on a sound-editor page swaps that cat between its current sound and the
+previous edit (Pawdo A/B), including its own FM6 patch. A continuous knob sweep
+is one edit; a pause of 750 ms or a different control begins another. Each cat
+has its own undo. Notes, level, pan and mute stay put. Undo is not saved.
+The browser also has direct page and part buttons. Editor page/part selection
+is temporary; the actual sounds and all their parameters are saved.
+
+FIRST MUSICAL JAM
+1. HOME once: Harmony. Pick C minor, COZY and IN KEY with the four knobs.
+2. HOME again: Looper. Pick 2 or 4 bars, REPLACE and QUANTIZED. Leave click OFF.
+3. SELECT back to Studio. Choose soft keys, marimba or space bell with PRESETS.
+4. Press REC while stopped. Watch the four lead-in dots for one bar. When
+   I'M LISTENING appears, play. The take ends automatically and starts looping.
+5. Choose OVERDUB on Looper and press REC to add notes at the next phrase start.
+   Existing notes play while you overdub. LFO restores the previous full take.
+6. Mix the band on Mixer, then SAVE to stop and remember the whole jam.
+
+RECORDING
+REC while stopped gives a one-bar visual lead-in. While playing, it waits for
+the next loop boundary. The recording lasts exactly the chosen phrase length.
+The display shows the current bar, a 16-step tape and four beat dots while
+armed. REC again ends a take early. REPLACE clears the previous phrase when
+recording begins. OVERDUB adds notes using Felucca's four-notes-per-step limit;
+held notes can replace following steps with ties. AS PLAYED keeps recorded
+timing; QUANTIZED aligns playback to the swung step grid.
+Change phrase length while stopped. Growing duplicates the current phrase;
+shrinking shortens playback. LFO undoes either change, including all 64 steps.
+EDIT clears the entire lead phrase; LFO undoes. Undo is one level, not saved.
+
+HARMONY THAT MAKES MUSICAL SENSE
+The band stays in your chosen key instead of following your last melody note.
+HOLD repeats the tonic. COZY: I-vi-IV-V. DREAM: I-IV-vi-V. JAZZ: ii-V-I-vi.
+Each chord lasts a bar. In minor, the same scale degrees use natural minor;
+JAZZ's ii is diminished and its v is minor. Bass supplies the root, with two
+upper notes choosing nearby inversions so the accompaniment moves smoothly.
+Energy adds rhythmic details, velocity accents and occasional fills.
+Bass notes now sustain up to a beat, with the same pitches and start times.
+New band sounds use a warm harmonic bass, with dry sustain and a gentle
+160 ms dip when the kick hits. This leaves the kick transient clear.
+Existing jams keep their saved sound settings when loaded.
+Key assist snaps the physical/panel keyboard into the chosen major/minor key.
+External MIDI pitches stay as sent, so your DAW/controller retains control.
+It does not rewrite notes already recorded. Drums ignore scale assistance.
+Old jams keep their original key, one-bar length, HOLD harmony and free keys;
+enable COZY and IN KEY on Harmony when you want the new arrangement features.
+
+LIVE PERFORMANCE
+LIVE gives each cat its own PLAY / MUTE / SOLO knob. Levels stay where you
+set them. Mutes are saved; solo is temporary and overrides the original mutes
+without erasing them. LFO on LIVE clears solo and restores that original mix.
+ENV on LIVE is tap tempo: tap quarter notes, 40-220 BPM. It averages up to four
+intervals. A pause resets it; external MIDI clock stays in charge when selected.
+Mutes and solo fade smoothly, preserving effect tails. PRESETS and ALGORITHM
+are inactive on LIVE so a performance gesture cannot replace your sounds.
+
+BUTTONS AND PAGE SHORTCUTS
+PLAY       Start / stop the band and loop.
+REC        Arm one take, or finish the current take early.
+ARP        Band on/off at the next bar. SEQ mutes/unmutes the lead loop.
+FX held    Maximum Cat: drum fills, flying hearts, big paws and a light chase.
+EDIT       Clear lead phrase. LFO restores the last take/clear/resize outside
+           the editor and Live; on editor pages LFO swaps sound A/B.
+SCL        Major/minor. ENV cycles hats (tap tempo on Live). GLO cycles rooms.
+OCT -/+    Live keyboard octave. SAVE stops and remembers the studio.
+PRESETS    Bongos, soft keys, meow, chiptune, marimba, drum kit, bass cat, bell.
+ALGORITHM  Lofi, Funk, Arcade outside the sound editor. Changes its engine inside.
+PRESETS and ALGORITHM act on the selected cat on all five sound editor pages.
+Choosing a band style intentionally loads its three accompaniment sounds.
+Leave ALGORITHM alone on the original pages to keep your custom band sounds.
+
+A CAT WITH PERSONALITY
+Cream, tuxedo and calico coats; bare ears, headphones, beret, shades, crown
+or flower. Midnight, mint, strawberry and coffee rooms. Blinks, gentle beat
+bobs, recovering paws, pitch glances and floating hearts follow your notes.
+The three bandmates react to their own parts and dim when muted.
+Hold FX from any page for a full-stage party; release returns to your page.
+Calm mode keeps this celebration still.
+Finish a phrase for a little celebration. Three secret musical phrases wake
+the Jazz Police, open the Cat Cafe or send a Purrbit into orbit. Each is visual
+only: it never changes your sound, tempo or recording. See EASTER-EGGS.txt
+for the optional spoilers. They work transposed and time out between phrases.
+Calm mode disables the extra bobbing, blinks and hearts; note feedback remains.
+The meow is a playable formant synth. All art is procedural and original.
+
+METRONOME
+Click and Felucca's audio count-in are OFF on every boot. Looper KNOB 4 changes
+OFF / RECORD / ON for the session. Help KNOB 1 does the same. The browser has
+an explicit selector. This does not mute the band. The visual lead-in remains.
+The physical FM-1's USB audio excludes the click; its speaker/headphone DAC
+includes it. USB recordings cannot establish the speaker's metronome state.
+
+SAVING / MIGRATION
+SAVE waits for silence and uses Felucca's redundant CRC-checked autosave.
+Idle autosave remains enabled. The phrase, instrument, style, mixer, harmony,
+loop settings, tempo, swing, reverb, coat, hat and room restore on next boot.
+Version 0.1 jams migrate automatically. Restoring a Bongo archive through
+Felucca's backup protocol also restores its studio controls and saves the jam. Compact settings use a BC2 + BASE32
+project-name tag inside the existing format, with no new flash layout.
+The four explicit project slots are not used. Page, solo, undo and animation state
+are temporary. Reinstalling 0.1 after saving in 0.2 needs the old backup to
+recover the old metadata; 0.1 cannot interpret the new BC2 tag.
+
+BROWSER PREVIEW / AUDIO EXPORT
+Open http://127.0.0.1:8766/ and click Switch on. The same C audio, sequencer,
+controls and renderer run as WebAssembly. Page buttons and live knob captions
+help you learn the physical controls. Click/drag knobs or use the keyboard.
+Record WAV captures up to 90 seconds of the browser instrument's stereo audio
+at 44.1 kHz / 16-bit. Stop & save WAV downloads the performance. It records
+no microphone. This is separate from the physical FM-1 and its saved jam.
+The demo plays a short melody in the current key using your current sound; it
+keeps your sound and hat. It is unavailable while a take is armed/recording.
+You can capture the demo with Record WAV.
+Run locally: python3 -m http.server 8766 --bind 127.0.0.1 --directory build/emu
+
+INSTALLATION / RECOVERY
+Package: bongo-cat-studio-0.4.0-rc1.fwsc in the release bundle.
+Identity FM-1_980; editor INFO BONGO CAT 0.4.0-rc1. USB name remains Felucca.
+The existing Felucca updater, bootloader and OCT- + OCT+ recovery are retained.
+Use the normal Felucca installer, without forcing a package. See INSTALL.txt
+in the release bundle for its tested route, backup commands and recovery notes.
+The release's VERIFICATION.json records its evidence and limits; keep your
+own pre-update backup and the previous working firmware for recovery.
+This focused instrument replaces Felucca's panel editor. External editor
+parameter edits are outside its workflow. USB MIDI note input remains.
+
+SOURCE / CREDITS
+Foundation: hugelton/Felucca v1.6.1,
+  a53ecf428c29c780108fd70a31b71a32a6b5c313
+Engine submodule: c46e0086f69bdc26df1cd144dca9e683cc4531dd
+Felucca by Leo Kuroshita / Hügelton Instruments and its contributors, GPL-3.0.
+Keep LICENSE, LICENSES/, LICENSING.md, the engine notices and sample/font attributions with
+redistributed builds. New firmware overlay files are GPL-3.0-only.
+This is an unofficial custom build, not an upstream Felucca release.
+See BUILDING-BONGO.txt for the build and test instructions.

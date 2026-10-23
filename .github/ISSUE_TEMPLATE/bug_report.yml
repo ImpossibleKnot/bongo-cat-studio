@@ -1,0 +1,43 @@
+name: Bug report
+description: A cat is behaving unexpectedly (one reproducible bug per issue)
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us how to reproduce the problem. Please do not attach private jam backups.
+  - type: input
+    id: version
+    attributes:
+      label: Tiny Studio version
+      description: Include the version you installed and whether this is the physical FM-1 or browser preview
+      placeholder: "0.4.0-rc1, physical FM-1"
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Computer, OS and browser (if the editor, installer or USB is involved)
+      placeholder: "macOS 15.6, Chrome 140"
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      description: A photo or short video helps.
+    validations:
+      required: true

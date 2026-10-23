@@ -1,0 +1,16 @@
+handshake answered                                   ok
+identity frame is FM-1_900                           ok
+  19 requests
+session commits (flash.bin exactly 0x93000)          ok
+headers + loader + confirm, no head reads            ok
+staged body == the package's loader                  ok
+LOADER.BIN head CRC                                  ok
+record at 0xE4F00 == RAM record                      ok
+record CRC / type / magic / ota_addr                 ok
+nothing written outside 0xE0000..0xE4FFF             ok
+boot cleanup erases the area                         ok
+second boot: nothing to do                           ok
+another board's size (0x9D000): -15, no commit, no erase ok
+host gone -> no commit, area clean                   ok
+no 'success' -> -13, no commit, area clean           ok
+ota test passed

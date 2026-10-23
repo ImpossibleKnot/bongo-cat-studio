@@ -1,0 +1,40 @@
+TINY STUDIO 0.4.0-rc1 / INSTALLATION
+
+Tested hardware upgrade: Tiny Studio 0.3.0 -> 0.4.0-rc1 on one M-VAVE FM-1.
+The package identity is FM-1_980. USB MIDI and stereo audio are named Felucca.
+For a different starting firmware, use that firmware's documented exit route.
+This bundle does not replace an official stock restore/recovery workflow.
+
+Python 3, a USB data cable and the supplied mido/python-rtmidi dependencies:
+  python3 -m venv .venv
+  .venv/bin/python -m pip install -r requirements.txt
+
+1. Verify the files:
+  shasum -a 256 -c SHA256SUMS
+
+2. Stop playback and leave the controls untouched for backup. Close other apps
+   sending MIDI transport. With the running Felucca/Bongo device connected:
+  .venv/bin/python tools/capture_felucca_backup.py my-before-update.json
+   It reads 13 objects and checks every CRC. A completed backup must exist
+   before proceeding; keep a second copy somewhere you trust. It will not
+   overwrite an existing backup file.
+
+3. Install using the normal Felucca updater (no force flag):
+  .venv/bin/python tools/felucca-1.6.1/fm1_install.py bongo-cat-studio-0.4.0-rc1.fwsc --port Felucca
+   Keep USB and power connected until the updater finishes and verifies.
+
+4. For an existing Bongo jam, restore that exact current-jam backup if needed:
+  .venv/bin/python tools/restore_bongo_jam.py my-before-update.json
+   This restores object 0 only, through the CRC-checked backup protocol.
+   The firmware commits it to autosave when quiet. Other saved objects stay put.
+   A Felucca archive is a backup for returning to Felucca, not a Bongo jam import.
+
+5. Verify sound, save/reload, and the controls you use. Make a fresh backup for
+   comparison if desired. The metronome starts OFF; Help K1 changes it.
+
+RECOVERY
+The normal Felucca update loader and OCT- + OCT+ recovery path are retained.
+Follow the original Felucca recovery instructions for the state of the device;
+do not force another package after a failed update. The source's BUILDING.md
+and supplied updater describe the underlying protocol. Keep the last working
+firmware and its matching backup before upgrading.

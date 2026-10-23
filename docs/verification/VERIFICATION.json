@@ -1,0 +1,69 @@
+{
+  "name": "Bongo Cat's Tiny Studio",
+  "version": "0.4.0-rc1",
+  "prerelease": true,
+  "product": "FM-1_980",
+  "package": "bongo-cat-studio-0.4.0-rc1.fwsc",
+  "source": "bongo-cat-studio-0.4.0-rc1-source.tar.gz",
+  "device_verified": true,
+  "restored_preupdate_jam": true,
+  "status": "installed_release_candidate_hardware_audio_verified_current_jam_preserved",
+  "upstream_commit": "a53ecf428c29c780108fd70a31b71a32a6b5c313",
+  "engine_commit": "c46e0086f69bdc26df1cd144dca9e683cc4531dd",
+  "changes": [
+    "Live page: smooth per-part mute/solo without changing levels; temporary solo restores original mutes",
+    "Tap tempo averages up to four taps and respects external MIDI clock",
+    "Independent sound A/B on each part, including custom FM6 patches and grouped knob gestures",
+    "Three transposable visual Easter eggs with CALM support and no saved music changes",
+    "Visible editor save/error/undo feedback and take-mode protection",
+    "Browser demo preserves sound/hat and refuses armed recording; ordered inputs through boot/navigation; responsive captions and visible storage errors"
+  ],
+  "memory": {
+    "app_bytes": 531604,
+    "app_limit": 581564,
+    "data_bss_bytes": 63336,
+    "data_bss_limit": 73728,
+    "pool_bytes": 328896,
+    "pool_limit": 368640
+  },
+  "verification": [
+    "Target image, loader, memory, restricted-register and interrupt-code checks passed",
+    "Exact-package OTA/loader simulations, update from 0.3.0 and independent package identity/CRC parser passed",
+    "Six ASan/UBSan suites: musical invariants, recording/overdub/undo, quiet metronome and cold boot",
+    "All 4 parts x 13 engines: editing, sound A/B, custom FM6 patch, mixer and sequence preservation",
+    "Live stereo fades, mute restoration, tap tempo, three Easter eggs in all transpositions and CALM passed",
+    "2000 release gestures plus 400 general gestures; finite stereo output",
+    "Chrome: real WASM/AudioWorklet, all editors, save/reload, WAV, Live/tap/A-B, recording-safe demo and phone layout without JS errors",
+    "Ordered browser controls tested through startup and rapid navigation",
+    "Actual 60-second stereo USB capture: zero clipped samples, zero new audio deadline misses or voice shedding; 38 percent CPU during sampled playback",
+    "Fresh pre-install jam restored: every byte of all 13 backup objects matches",
+    "Committed autosave flash header and payload CRCs plus all 3840 project bytes match",
+    "Read-only MENU_GET confirms metronome and count-in OFF"
+  ],
+  "limitations": [
+    "One physical FM-1 tested; other hardware revisions not tested",
+    "No human inspection of every physical key, encoder or display",
+    "No manual power cycle; committed flash bytes and separate-process host cold boot checked",
+    "One-minute hardware jam; no long-duration hardware soak or every possible engine combination"
+  ],
+  "package_sha256": "6796ac71b56b2bffbd35a18ee6df5a0e8010ee9a16714c9c64a716b10c6c3a39",
+  "source_sha256": "3b5ee6a28e62d3e8ef2de5b35454f1e43b0d3e240e2bc27e71de579817d46621",
+  "checked_at": "2026-10-23T21:04:30.746044+00:00",
+  "hardware": {
+    "duration_seconds": 60,
+    "peak": 0.4993896484375,
+    "rms": 0.037288252264261246,
+    "clipped_samples": 0,
+    "audio_deadline_misses": 0,
+    "voices_shed": 0,
+    "sampled_cpu_percent": 38,
+    "usb_underruns": 0,
+    "usb_overruns": 0
+  },
+  "preservation": {
+    "all_13_objects_identical": true,
+    "committed_flash_exact_match": true,
+    "project_bytes": 3840
+  },
+  "metronome": "OFF via read-only MENU_GET"
+}

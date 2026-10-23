@@ -1,0 +1,32 @@
+BONGO CAT'S TINY STUDIO / 0.4.0-rc1
+
+Playful four-part firmware for the M-VAVE FM-1.
+This is an unofficial release candidate built on Felucca 1.6.1.
+
+TRY IT
+Run: python3 -m http.server 8766 --bind 127.0.0.1 --directory preview
+Open http://127.0.0.1:8766/ in a current browser and click Switch on.
+This plays the same C instrument in WebAssembly, with its own saved jam.
+No FM-1 is needed for the preview. Record WAV exports browser audio.
+
+PLAY IT
+PLAY starts the band. PRESETS picks your lead; ALGORITHM picks a band style.
+SELECT/HOME changes pages. Harmony chooses key/chords. Looper gives 1/2/4-bar
+recording and overdub; REC arms a take, then watch the one-bar visual count-in.
+Mixer sets levels. Sounds chooses a part, engine and preset; Tone, Colour,
+Envelope and Effects shape it. LFO on those pages swaps the last sound edit.
+Live turns each knob between Play / Mute / Solo. LFO clears solo. ENV taps tempo.
+SAVE stops and remembers the jam. FX held invites Maximum Cat to the party.
+BONGO-STUDIO.txt is the complete controls guide. EASTER-EGGS.txt has spoilers.
+
+INSTALL IT
+Read INSTALL.txt for the tested route and backup commands. Verify SHA256SUMS.
+The .fwsc package is paired with its complete source archive and licence files.
+VERIFICATION.json records the checks and their limits. Human hardware testing
+still matters before treating the candidate as a stable general release.
+
+SOURCE
+Unpack bongo-cat-studio-0.4.0-rc1-source.tar.gz, including the engine submodule's
+files. BUILDING-BONGO.txt explains the custom build and tests. The original
+BUILDING.md and LICENSING.md remain in the source for upstream details.
+No private device backups or recordings are included in this release bundle.

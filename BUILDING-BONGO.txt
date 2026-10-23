@@ -1,0 +1,89 @@
+BONGO CAT 0.4.0-rc1 BUILD / VERIFICATION
+
+The complete source includes the pinned Felucca engine files and original notices.
+See BUILDING.md for the underlying build. The overlay is in
+firmware/src/bongo_{state,audio,ui,storage}.*, with small note/step/UI hooks.
+
+REBUILD
+Follow BUILDING.md for Python dependencies, the pinned JieLi toolchain and SDK.
+On macOS, use Docker Desktop or a Docker-compatible runtime (the tested setup
+used a dedicated Colima VM). Linux x86-64 can use the toolchain directly.
+With those prerequisites installed:
+  JIELI_TOOLCHAIN="$HOME/.jieli/toolchain" \
+    python3 tools/build_bongo.py --sdk "$HOME/fw-AC79_AIoT_SDK"
+  sh web/emu/build.sh
+
+The tested Apple Silicon VM ran the official x86-64 JieLi compiler through Rosetta.
+SDK files match upstream's pinned AC79NN_SDK_V1.2.1 hashes. Python requires
+Pillow and fonttools; browser compilation requires Emscripten.
+Do not pass --release: tools/build_bongo.py supplies the identity and version.
+Outputs: build/bongo-cat-studio-0.4.0-rc1.fwsc, build/emu/ and BONGO-SHA256SUMS.
+
+HOST TESTS
+Run python3 tools/test_bongo.py to compile and run all six sanitizer suites
+(including editor and release regressions), plus separate cold-boot checks.
+To compile a single test manually:
+  clang -O1 -g -fsanitize=address,undefined \
+    -fno-sanitize=shift,signed-integer-overflow -fno-sanitize-recover=all \
+    -ffp-contract=off -w -Ibuild/gen -Ifirmware/src \
+    -o build/TEST_NAME tests/TEST_NAME.c -lm
+Run each executable. Run bongo_test and bongo_metronome_test again with the
+argument restore, in a new process, to verify the saved NOR state.
+The two sanitizer exclusions cover intentional upstream fixed-point DSP;
+address, bounds and the remaining undefined-behaviour checks stay enabled.
+
+Checks: all eight sounds, key/MIDI input, all 12 keys and four progressions in
+major/minor, mixer preservation, 1/2/4-bar takes, visual lead-in, overdubbing,
+64-step undo, resize/undo, v0.1 migration, 400 mixed gestures, save/cold boot.
+tests/bongo_backup_check.c also loads the actual pre-update project payload,
+restores its studio controls through the runtime backup path, and verifies
+that the restored 64-step lead and metadata are committed to autosave.
+The metronome suite renders the real DAC path, tests audible ON and silent OFF,
+keeps band/loop enabled, and boots with inherited click ON / count-in 2 bars.
+
+SOUND EDITOR CHECKS
+bongo_editor_test traverses all 13 engines on all four parts and edits all
+eight engine controls, ADSR and effects. It checks parameter bounds, aliases,
+unchanged non-target tracks and sequence bytes, key audition routing, REC
+return-to-lead, dynamic knob names, SAVE and a separate-process cold boot.
+
+BASS / MAXIMUM CAT CHECKS
+bongo_bass_party_test checks all style/energy onset positions, actual sustained
+sequencer audio, the smooth kick duck and stereo symmetry, muted-kick bypass,
+animation without lead notes, still CALM mode and return to the selected page.
+bongo_bass_upgrade applies only the requested bass changes to a captured jam,
+and asserts every other track, global, automation and studio choice survives.
+Loading a jam no longer regenerates its backing steps before playback.
+
+TARGET / UPDATE CHECKS
+Application 531604 / 581564 bytes; data+BSS 63336 / 73728;
+pool 328896 / 368640. Builder checks loader, memory margins, app entry,
+register access restrictions and interrupt/second-core loops.
+OTA and loader simulations run on the exact new package, including v0.1 to
+v0.2, corrupted-package rejection, legal erase windows and user-data retention.
+TransitFM1's independent load_package parser validates package CRCs only;
+no Transit firmware is installed.
+
+BROWSER / HARDWARE
+Chrome tests real WASM/AudioWorklet startup, pages, changing knob labels,
+metronome control, dress-up, live demo, a non-silent stereo WAV download and
+quiet reload. Consult docs/verification/VERIFICATION.json (also VERIFICATION.json in the
+release bundle) for the actual hardware status
+and measurements of this candidate.
+The hardware audio capture uses only Felucca USB audio,
+never a microphone. USB audio excludes metronome; MENU readback checks its
+state. Physical key/encoder/display inspection and a long soak require a
+human and must not be represented as completed by these automated tests.
+
+RELEASE CHECKS
+bongo_release_test covers independent sound A/B on all parts/engines, custom
+FM6 patches, grouped knob undo, solo/mute fades, external-clock-safe tap tempo,
+three transposable secrets without saved changes, CALM, take-mode protection
+and 2000 mixed live gestures with finite audio.
+Browser: PLAYWRIGHT_MODULE=/absolute/path/to/playwright/index.mjs node
+tests/bongo_browser_release_check.mjs (Chrome; local server on port 8766).
+Exact package tests use tests/ota_test.c and ldr_test.c with the custom identity
+FM-1_980 in place of their upstream FM-1_900 test identity.
+
+node tests/bongo_worklet_order_test.mjs checks ordered input during startup
+and rapid navigation, independent of Chrome.
