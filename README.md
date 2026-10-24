@@ -2,18 +2,28 @@
 
 # Bongo Cat’s Tiny Studio 🐾
 
+**by [Impossible Knot](https://github.com/ImpossibleKnot)**
+
 ### Four cats. Thirteen sound engines. Absolutely no rent contributions.
 
 **A playable little band for the M-VAVE FM-1.**
 
-<img src="docs/media/studio.gif" alt="Actual Tiny Studio firmware: a calico cat plays keys while the three bandmates react to the music" width="400">
+<a href="https://github.com/ImpossibleKnot/bongo-cat-studio/releases/download/v0.4.0-rc1/Tiny-Studio-Short.mp4">
+<img src="docs/media/tiny-studio-short-preview.gif" alt="Short preview: Tiny Studio animates inside the FM-1 display, then zooms in on the cat; the hardware view is a screen composite" width="300">
+</a>
+
+[**▶ Full 32-second Short — with sound (MP4)**](https://github.com/ImpossibleKnot/bongo-cat-studio/releases/download/v0.4.0-rc1/Tiny-Studio-Short.mp4)
+
+*Four seconds of responsible product demonstration. Then the cats take over.*
 
 Your synthesizer has hired a cat. The cat has hired three more cats.<br>
 Somehow, this is now a recording studio.
 
-[**Download 0.4.0-rc1**](https://github.com/alibros/bongo-cat-studio/releases/tag/v0.4.0-rc1) · [**Install**](INSTALL.txt) · [**Controls**](BONGO-STUDIO.txt) · [**Build it**](BUILDING.md)
+[**Download 0.4.0-rc1**](https://github.com/ImpossibleKnot/bongo-cat-studio/releases/tag/v0.4.0-rc1) · [**Install**](INSTALL.txt) · [**Controls**](BONGO-STUDIO.txt) · [**Build it**](BUILDING.md)
 
 `FM-1 firmware` · `4 parts` · `13 engines` · `GPL-3.0-only` · `release candidate`
+
+<sub>The Short uses actual firmware animation and audio. Its FM-1 opening is a screen composite using a M-VAVE product photo. [Media credits](docs/media/SHORT-CREDITS.md).</sub>
 
 </div>
 
@@ -52,14 +62,14 @@ Drum fills, big paws, flying hearts, confetti and a hardware light chase. Releas
 
 ## Download & install
 
-**Current version: [0.4.0-rc1](https://github.com/alibros/bongo-cat-studio/releases/tag/v0.4.0-rc1), a public release candidate.**
+**Current version: [0.4.0-rc1](https://github.com/ImpossibleKnot/bongo-cat-studio/releases/tag/v0.4.0-rc1), a public release candidate.**
 
 | Download | What you get |
 | --- | --- |
-| [**Complete release ZIP — start here**](https://github.com/alibros/bongo-cat-studio/releases/download/v0.4.0-rc1/bongo-cat-studio-0.4.0-rc1.zip) | Firmware, complete corresponding source, backup/restore tools, installer, compiled browser preview, licences, checksums and test evidence. |
-| [Firmware `.fwsc`](https://github.com/alibros/bongo-cat-studio/releases/download/v0.4.0-rc1/bongo-cat-studio-0.4.0-rc1.fwsc) | Just the installable package. Keep the accompanying source and licence bundle. |
-| [Complete source `.tar.gz`](https://github.com/alibros/bongo-cat-studio/releases/download/v0.4.0-rc1/bongo-cat-studio-0.4.0-rc1-source.tar.gz) | Exact source snapshot for this release, including the engines. |
-| [SHA-256 checksums](https://github.com/alibros/bongo-cat-studio/releases/download/v0.4.0-rc1/SHA256SUMS) | Checksums for the three downloads above. |
+| [**Complete release ZIP — start here**](https://github.com/ImpossibleKnot/bongo-cat-studio/releases/download/v0.4.0-rc1/bongo-cat-studio-0.4.0-rc1.zip) | Firmware, complete corresponding source, backup/restore tools, installer, compiled browser preview, licences, checksums and test evidence. |
+| [Firmware `.fwsc`](https://github.com/ImpossibleKnot/bongo-cat-studio/releases/download/v0.4.0-rc1/bongo-cat-studio-0.4.0-rc1.fwsc) | Just the installable package. Keep the accompanying source and licence bundle. |
+| [Complete source `.tar.gz`](https://github.com/ImpossibleKnot/bongo-cat-studio/releases/download/v0.4.0-rc1/bongo-cat-studio-0.4.0-rc1-source.tar.gz) | Exact source snapshot for this release, including the engines. |
+| [SHA-256 checksums](https://github.com/ImpossibleKnot/bongo-cat-studio/releases/download/v0.4.0-rc1/SHA256SUMS) | Checksums for the three downloads above. |
 
 Read [INSTALL.txt](INSTALL.txt) before flashing. It walks through a verified backup, the normal Felucca updater and restoring an existing Bongo jam. The tested hardware upgrade is **Tiny Studio 0.3.0 → 0.4.0-rc1 on one FM-1**. Other starting firmwares need their own documented migration route; a Felucca backup is for returning to Felucca, not a Bongo jam import.
 
@@ -106,7 +116,7 @@ Open **http://127.0.0.1:8766/** in Chrome or Edge and click **Switch on**. Play 
 
 *The bass cat would like 100% sustain and a heated blanket.*
 
-All GIFs above are captures of the real firmware renderer, using a fresh demo state. The screenshot shows the browser preview. No photographed hardware is implied.
+The standalone cat GIFs are captures of the real firmware renderer using a fresh demo state; the screenshot shows the browser preview. The Short’s hardware opening combines the same renderer with a credited product photo, as labelled in the video.
 
 ## There are secrets in the keyboard
 
@@ -139,12 +149,12 @@ This build has passed six native ASan/UBSan suites, editor checks across all **4
 
 On the tested FM-1, a **60-second stereo USB capture** had **zero clipped samples, zero new audio deadline misses and zero voices shed**; CPU was **38% at the sampled moment**. The existing jam and all 13 backup objects matched after the upgrade. See [verification evidence](docs/verification/VERIFICATION.json) and [test logs](docs/verification/test-logs).
 
-The practical limits: one physical device, no manual power-cycle test or human check of every physical control, no long hardware soak, and no guarantee for every heavy-engine combination. USB audio excludes the metronome; click-off was checked separately through menu readback and the simulated DAC path. This is a release candidate, with shared CPU and voice limits. Please [report reproducible bugs here](https://github.com/alibros/bongo-cat-studio/issues).
+The practical limits: one physical device, no manual power-cycle test or human check of every physical control, no long hardware soak, and no guarantee for every heavy-engine combination. USB audio excludes the metronome; click-off was checked separately through menu readback and the simulated DAC path. This is a release candidate, with shared CPU and voice limits. Please [report reproducible bugs here](https://github.com/ImpossibleKnot/bongo-cat-studio/issues).
 
 ## Build, tinker, contribute
 
 ```sh
-git clone https://github.com/alibros/bongo-cat-studio.git
+git clone https://github.com/ImpossibleKnot/bongo-cat-studio.git
 cd bongo-cat-studio
 ```
 

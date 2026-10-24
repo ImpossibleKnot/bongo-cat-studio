@@ -1,6 +1,10 @@
 # Tiny Studio credits
 
+**Bongo Cat’s Tiny Studio — by [Impossible Knot](https://github.com/ImpossibleKnot).**
+
 Tiny Studio adds the cat instrument, sound editor, looper workflow, live controls and original procedural artwork to Felucca. Its foundation and third-party credits follow, with original licences retained. This is an independent custom build.
+
+The promotional Short has separate [media credits](docs/media/SHORT-CREDITS.md), including its M-VAVE hardware photograph.
 
 # Credits
 

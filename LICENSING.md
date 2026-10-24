@@ -2,6 +2,10 @@
 
 Tiny Studio is an independent GPL-3.0-only modification of Felucca. New cat-layer code, procedural artwork, publication tools and documentation are GPL-3.0-only. The original notices below remain applicable. In this repository the MIT engine files are vendored at the pinned revision in [docs/PROVENANCE.md](docs/PROVENANCE.md), rather than stored as a git submodule. Ordinary clones include the complete engine source. References below to upstream release names and controls describe Felucca.
 
+## Promotional media
+
+The Short and `docs/media/tiny-studio-short-preview.gif` include a M-VAVE product photograph. That third-party photo retains its own copyright and is not licensed by this project under the GPL. See [Short media credits](docs/media/SHORT-CREDITS.md). It is used only in the promotional composite, not in the firmware or its existing release bundles.
+
 # Felucca licensing
 
 Felucca is free software, licensed under the GNU General Public License, version 3 only

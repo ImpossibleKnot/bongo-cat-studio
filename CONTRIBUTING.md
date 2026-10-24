@@ -1,6 +1,6 @@
 # Helping the cats
 
-Tiny Studio bugs and ideas belong in [this repository’s issues](https://github.com/alibros/bongo-cat-studio/issues). Please include the firmware version, physical device or browser, steps to reproduce, expected behaviour and what happened. Photos and short clips help; keep private backups out of public issues.
+Tiny Studio bugs and ideas belong in [this repository’s issues](https://github.com/ImpossibleKnot/bongo-cat-studio/issues). Please include the firmware version, physical device or browser, steps to reproduce, expected behaviour and what happened. Photos and short clips help; keep private backups out of public issues.
 
 Pull requests should describe the musical or usability problem, keep changes focused, and state which checks ran. Follow [BUILDING.md](BUILDING.md); test physical firmware on an FM-1 when possible and clearly distinguish simulations from device evidence. Preserve existing jam formats and sequences unless the user explicitly changes them. Heavy sound combinations share the FM-1's CPU and voices.
 
