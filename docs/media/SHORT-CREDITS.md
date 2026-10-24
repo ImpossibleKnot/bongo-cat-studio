@@ -2,7 +2,7 @@
 
 **Bongo Cat’s Tiny Studio — by [Impossible Knot](https://github.com/ImpossibleKnot).**
 
-[Full 32-second Short with sound](https://github.com/ImpossibleKnot/bongo-cat-studio/releases/download/v0.4.0-rc1/Tiny-Studio-Short.mp4). The README GIF is a silent, four-second excerpt of its opening. The MP4 is attached to the existing `v0.4.0-rc1` release as promotional media; it does not change that firmware build.
+[Full 32-second Short with sound](https://github.com/ImpossibleKnot/bongo-cat-studio/releases/download/v0.4.0-rc1/Tiny-Studio-Short.mp4). `tiny-studio-short-preview.gif` is a silent, four-second excerpt of its opening. The README uses the original `studio.gif` firmware animation. The MP4 is attached to the existing `v0.4.0-rc1` release as promotional media; it does not change that firmware build.
 
 - **Animation and sound:** captured together from a fresh native emulator running the actual Tiny Studio C renderer and audio engine. The original 120 BPM demo uses the firmware’s meow, keys, bass, drums, marimba and chiptune sounds. No private user jam or microphone recording was used.
 - **Hardware reconstruction, 0–4 seconds:** an animated screen composite. The captured display is fitted into the LCD of an official M-VAVE FM-1 product photograph, and both move together through the zoom. This is not camera footage of a physical performance. The video labels the opening “REAL FIRMWARE / SCREEN COMPOSITE”.

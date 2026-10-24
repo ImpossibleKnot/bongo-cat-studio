@@ -8,13 +8,9 @@
 
 **A playable little band for the M-VAVE FM-1.**
 
-<a href="https://github.com/ImpossibleKnot/bongo-cat-studio/releases/download/v0.4.0-rc1/Tiny-Studio-Short.mp4">
-<img src="docs/media/tiny-studio-short-preview.gif" alt="Short preview: Tiny Studio animates inside the FM-1 display, then zooms in on the cat; the hardware view is a screen composite" width="300">
-</a>
+<img src="docs/media/studio.gif" alt="Actual Tiny Studio firmware: a calico cat plays keys while the three bandmates react to the music" width="400">
 
 [**▶ Full 32-second Short — with sound (MP4)**](https://github.com/ImpossibleKnot/bongo-cat-studio/releases/download/v0.4.0-rc1/Tiny-Studio-Short.mp4)
-
-*Four seconds of responsible product demonstration. Then the cats take over.*
 
 Your synthesizer has hired a cat. The cat has hired three more cats.<br>
 Somehow, this is now a recording studio.
