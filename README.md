@@ -171,3 +171,5 @@ M-VAVE and FM-1 belong to their respective owners. This project is not affiliate
 **Please give the cats a star. They have confused it with a MIDI note.** ⭐
 
 </div>
+
+You can also try Bongo Cat Studio in the browser, no flashing needed, in the free community [FM-1 Emulator](https://fm1-emulator.atst.tools/).
